@@ -1,0 +1,101 @@
+:root{
+    --escuro: #001e26;
+    --medio: #21595a;
+    --claro: #68a49f;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--escuro);
+}
+
+body{
+    background-image:linear-gradient(-30deg, var(--escuro), var(--medio), var(--claro));
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+#calculadora{
+    border-radius: 15px;
+    width: 400px;
+    padding: .5em;
+    background-color: var(--claro);
+    box-shadow: 5px 5px 10px var(--medio);
+    display: flex;
+    flex-direction: column;
+}
+
+#calculadora h3{
+    font-size: .8em;
+    font-weight: 300;
+}
+
+#operacoes{
+    text-align: right;
+}
+#operacao-anterior, #operacao-atual{
+    padding: .2em;
+    min-height: 1.6em;
+    overflow-wrap: break-word;
+}
+#operacao-anterior{
+    font-weight: 600;
+    color: var(--medio)
+}
+
+#operacao-atual{
+    font-size: 3em;
+    font-weight: 700;    
+}
+
+#caixa-botoes{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+
+}
+
+#caixa-botoes button{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: var( --medio);
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+#caixa-botoes button:hover{
+    background-color: var(--claro);
+    border-color: var(--escuro);
+}
+
+#caixa-botoes .numero{
+    background-color: var(--claro);
+    border-color: var(--escuro);
+}
+
+#caixa-botoes .numero:hover{
+    background-color: var(--medio);
+    border-color: transparent;
+}
+
+#caixa-botoes #btn-igual{
+    grid-column: span 2;
+    background-color: var(--escuro);
+    color: var(--claro);
+}
+#caixa-botoes #btn-igual:hover{
+    background-color: var(--medio);
+    border-color: var(--escuro);
+    color: var(--escuro);
+}
